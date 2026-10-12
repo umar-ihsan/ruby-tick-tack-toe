@@ -9,14 +9,14 @@ class Board
     def draw
         (0...size).times |i|
           (0...size).times |j|
-            print board[i][j]
+            print "#{board[i][j]}\t"
           end
           puts "---------------------"
         end
     end
     
     
-    
+
           
          
     
