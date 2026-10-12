@@ -7,17 +7,16 @@ class Board
     end
 
     def draw
-        (0...size).times |i|
-          (0...size).times |j|
-            print board[i][j]
-          end
-          puts "---------------------"
+        size.times do |i|
+            board_row = board[i].map {|cell| cell.to_s}.join(" | ")
+            puts "#{board_row}"
+
+            if i < size - 1
+                divider_size = (size * 3) - 1
+                puts "-" * divider_size
+            end
         end
     end
-    
-    
-    
-          
          
     
 end
